@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
@@ -1758,97 +1759,28 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap-grid.rtl.css" />
+    <Content Include="Content\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\css\bootstrap.rtl.css" />
+    <Content Include="Content\css\Global.css" />
+    <Content Include="Content\css\Global.min.css">
+      <DependentUpon>Global.css</DependentUpon>
+    </Content>
+    <Content Include="Content\img\1.jpg" />
+    <Content Include="Content\img\2.jpg" />
+    <Content Include="Content\img\3.jpg" />
+    <Content Include="Content\img\4.jpg" />
+    <Content Include="Content\img\5.jpg" />
+    <Content Include="Content\img\6.jpg" />
+    <Content Include="Content\img\7.jpg" />
+    <Content Include="Content\img\8.jpg" />
+    <Content Include="Content\img\9.jpg" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\masonry.js" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Admin\Content\bootstrap\css\bootstrap-grid.css.map" />
-    <Content Include="Areas\Admin\Content\bootstrap\css\bootstrap-grid.min.css.map" />
-    <Content Include="Areas\Admin\Content\bootstrap\css\bootstrap-reboot.css.map" />
-    <Content Include="Areas\Admin\Content\bootstrap\css\bootstrap-reboot.min.css.map" />
-    <Content Include="Areas\Admin\Content\bootstrap\css\bootstrap.css.map" />
-    <Content Include="Areas\Admin\Content\bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="Areas\Admin\Content\bootstrap\js\bootstrap.bundle.js.map" />
-    <Content Include="Areas\Admin\Content\bootstrap\js\bootstrap.bundle.min.js.map" />
-    <Content Include="Areas\Admin\Content\bootstrap\js\bootstrap.js.map" />
-    <Content Include="Areas\Admin\Content\bootstrap\js\bootstrap.min.js.map" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\brands.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\fontawesome.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\regular.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\solid.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\v4-shims.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_animated.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_bordered-pulled.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_core.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_fixed-width.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_icons.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_larger.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_list.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_mixins.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_rotated-flipped.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_screen-reader.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_shims.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_stacked.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\less\_variables.less" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\metadata\categories.yml" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\metadata\icons.json" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\metadata\icons.yml" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\metadata\shims.json" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\metadata\shims.yml" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\metadata\sponsors.yml" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\brands.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\fontawesome.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\regular.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\solid.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\v4-shims.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_animated.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_bordered-pulled.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_core.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_fixed-width.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_icons.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_larger.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_list.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_mixins.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_rotated-flipped.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_screen-reader.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_shims.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_stacked.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\scss\_variables.scss" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-brands-400.eot" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-brands-400.ttf" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-brands-400.woff" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-brands-400.woff2" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-regular-400.eot" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-regular-400.ttf" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-regular-400.woff" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-regular-400.woff2" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-solid-900.eot" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-solid-900.ttf" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-solid-900.woff" />
-    <Content Include="Areas\Admin\Fonts\fontawesome\webfonts\fa-solid-900.woff2" />
-    <Content Include="Areas\Admin\Fonts\fontsite\Sahel.woff" />
-    <Content Include="Areas\Admin\Scripts\jquery-1.9.1.min.map" />
-    <Content Include="Areas\Admin\Views\User\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\User\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\User\ListUser.cshtml" />
-    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.4.1.js" />
-    <Content Include="Scripts\jquery-3.4.1.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1858,10 +1790,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -1871,17 +1800,17 @@
     <Folder Include="Resources\Images\Thumb\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\scss\Global.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
@@ -1928,6 +1857,13 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Target Name="CopyRoslynFiles" AfterTargets="AfterBuild" Condition="!$(Disable_CopyWebApplication) And '$(OutDir)' != '$(OutputPath)'">
+    <ItemGroup>
+      <RoslynFiles Include="$(CscToolPath)\*" />
+    </ItemGroup>
+    <MakeDir Directories="$(WebProjectOutputDir)\bin\roslyn" />
+    <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="$(WebProjectOutputDir)\bin\roslyn" SkipUnchangedFiles="true" Retries="$(CopyRetryCount)" RetryDelayMilliseconds="$(CopyRetryDelayMilliseconds)" />
   </Target>
   <Target Name="CopyRoslynFiles" AfterTargets="AfterBuild" Condition="!$(Disable_CopyWebApplication) And '$(OutDir)' != '$(OutputPath)'">
     <ItemGroup>
