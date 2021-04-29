@@ -1,0 +1,5 @@
+﻿$navbar-height: 56px;
+
+.container-main {
+    margin-top: calc(#{$navbar-height} + 20px);
+}
