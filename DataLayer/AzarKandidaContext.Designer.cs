@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\darya\Documents\Visual Studio Git\AzarKandidaV2\DataLayer\AzarKandidaContext.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Mehdi\source\GitLab\azarkandidav2\DataLayer\AzarKandidaContext.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
