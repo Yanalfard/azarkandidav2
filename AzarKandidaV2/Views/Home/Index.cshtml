@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<DataLayer.TblImage>
 <style>
     * {
         margin: 0;
@@ -21,43 +21,49 @@
 </style>
 
 <div class="grid">
-    <a href=""><img src="~/Content/img/1.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/4.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/7.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/8.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/1.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/4.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/7.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/8.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/9.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/4.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/7.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/8.jpg" alt=""></a>
-    <a href=""><img src="~/Content/img/9.jpg" alt=""></a>
+
+    @foreach (var item in Model)
+    {
+        <a href="@item.Link"><img src="~/Resources/Images/Thumb/@item.ImageUrl" alt=""></a>
+
+    }
+    @*<a href=""><img src="~/Content/img/1.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/4.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/7.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/8.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/1.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/4.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/7.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/8.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/9.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/4.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/7.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/8.jpg" alt=""></a>
+        <a href=""><img src="~/Content/img/9.jpg" alt=""></a>*@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
 
 <script>
-        var macy = Macy({
-            container: '.grid',
-            trueOrder: false,
-            waitForImages: false,
-            margin: 24,
-            columns: 3,
-            breakAt: {
-                1600: 4,
-                1200: 3,
-                900: 2,
-                450: 1,
-            }
-        });
+    var macy = Macy({
+        container: '.grid',
+        trueOrder: false,
+        waitForImages: false,
+        margin: 24,
+        columns: 3,
+        breakAt: {
+            1600: 4,
+            1200: 3,
+            900: 2,
+            450: 1,
+        }
+    });
 </script>

@@ -123,7 +123,7 @@ namespace AzarKandidaV2.Areas.Admin.Controllers
             {
                 list = list.Where(p => p.Text.Contains(name)).ToList();
             }
-            if (name != "")
+            if (link != "")
             {
                 list = list.Where(p => p.Link.Contains(link)).ToList();
             }
