@@ -17,8 +17,8 @@ namespace AzarKandidaV2.Controllers
         [HttpPost]
         public ActionResult Index(string username, string password)
         {
-            string name = "SYGsahandi";
-            string pass = "136913701379";
+            string name = "gorbachevKabir";
+            string pass = "D@nkeGorbi1990";
             if (name == username && pass == password)
             {
                 bool RememberMe = true;

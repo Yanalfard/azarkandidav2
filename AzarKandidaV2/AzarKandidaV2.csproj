@@ -1755,10 +1755,6 @@
     <Content Include="Areas\Admin\Scripts\modal.js" />
     <Content Include="Areas\Admin\Scripts\popper.min.js" />
     <Content Include="Areas\Admin\Scripts\script.js" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap-grid.rtl.css" />
     <Content Include="Content\css\bootstrap-utilities.rtl.css" />
     <Content Include="Content\css\bootstrap.rtl.css" />
