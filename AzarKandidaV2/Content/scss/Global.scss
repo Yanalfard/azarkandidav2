@@ -1,5 +1,114 @@
-﻿$navbar-height: 56px;
+﻿@import '_colors.scss';
+@import '_layout.scss';
+
+/*#region Layout */
+.frow {
+    @include row();
+}
+
+.frowr {
+    @include row-reverse();
+}
+
+.fcol {
+    @include column();
+}
+
+.fcolr {
+    @include column-reverse();
+}
+
+@for $var from 1 to 12 {
+    .flex-#{$var} {
+        flex: $var;
+    }
+}
+
+.flex-auto {
+    flex: auto;
+}
+
+/*#endregion */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    border-bottom: 1px solid #dadada;
+    background-color: #fff !important;
+
+    .navbar-brand {
+
+        .title {
+            font-size: 1.1em;
+            color: $Text;
+            margin-bottom: 0;
+        }
+
+        .subtitle {
+            margin-top: 4px;
+            margin-bottom: 0;
+            font-size: .6em;
+            color: $Text-2;
+        }
+    }
+
+    .men {
+        width: 64px;
+        height: 64px;
+        margin: -4px;
+        @include border-def-radius;
+        border: 1px solid $Text-5;
+    }
+
+    .logo {
+        img {
+            margin: -4px;
+            width: 66px;
+            height: 66px;
+        }
+    }
+}
 
 .container-main {
-    margin-top: calc(#{$navbar-height} + 20px);
+    margin-top: calc(#{$navbar-height} + 24px);
+}
+
+.footer {
+    .footer-links {
+        list-style: none;
+
+        li {
+            cursor: pointer !important;
+            margin-bottom: 8px;
+
+            a {
+                font-size: 16px;
+                @include row;
+                color: $Text;
+                @include trans(.3s);
+                text-decoration: none;
+                cursor: pointer;
+                -webkit-align-items: center;
+                align-items: center;
+
+                ion-icon {
+                    font-size: 20px;
+                    margin-left: 8px;
+                    min-width: 20px;
+                }
+
+                label {
+                    font-size: 14px;
+                }
+            }
+
+            a:hover {
+                color: $Text-3;
+            }
+        }
+    }
 }

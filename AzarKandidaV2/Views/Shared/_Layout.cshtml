@@ -3,10 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <meta name="description" content="بولتن تبلیغاتی انتخابات شورای شهر تبریز" />
+
+    <title>@(ViewBag.Title ?? "آذر کاندیدا")</title>
 
     <link href="~/Content/css/bootstrap.rtl.css" rel="stylesheet" />
     @*<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">*@
+
+    <link href="~/Content/css/Global.min.css" rel="stylesheet" />
 
     @RenderSection("Styles", required: false)
 
@@ -14,20 +18,14 @@
 <body>
     <nav class="navbar fixed-top navbar-expand-lg shadow navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">آذرکاندیدا</a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-            </div>
+            <a class="navbar-brand" href="/">
+                <h1 class="title">آذرکاندیدا</h1>
+                <p class="subtitle">بولتن تبلیغات انتخابات</p>
+            </a>
+            <img src="~/Content/img/Men.png" alt="" class="men" width="64" height="64" />
+            <a class="logo" href="https://arvintavco.com">
+                <img src="~/Content/svg/Logo.svg" width="64" height="64" alt="" />
+            </a>
         </div>
     </nav>
 
@@ -35,10 +33,83 @@
         @RenderBody()
     </div>
 
+
+    <footer class="footer container-fluid">
+        <content class="container-md py-2">
+            <div class="row mb-4">
+                <div class="col-10 mx-auto text-center">
+                    <h2 class="h4 mb-3">
+                        درباره این وبسایت
+                    </h2>
+                    <p class="text-muted">
+                        وب سایت جامع تبلیغاتی نامزدهای انتخابات مجلس یازدهم شورای اسلامی با برند آذرکاندیدا تحت نظر هلدینگ ایده پرداز آروین تاو با هدف پایین آوردن میزان استفاده از کاغذ به عنوان تبلیغات و حفظ محیط زیست به صورت تخصصی و بدون وابستگی به هیچ جناح و حزب خاصی، به شکل جامع به معرفی نامزدهای انتخاباتی (استانهای آذربایجان شرقی، آذربایجان غربی و اردبیل) می پردازد تا ملت غیور آذربایجان بتوانند نامزد مورد نظر خود را بشناسند و مقایسه های لازم را انجام دهند و همچنین بهترین ها را انتخاب کنند. لازم به ذکر است که این سایت به صورت جامع فقط به موضوع تبلیغات و معرفی نامزدهای انتخاباتی مجلس یازدهم شورای اسلامی میپردازد و به هیچ عنوان موضوع های دیگر را تحت پوشش خود ندارد
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 text-center">
+                    <a href="">
+                        <img src="~/Content/img/Enamad.png" alt="" />
+                    </a>
+                </div>
+                <div class="col-4 text-center">
+                    <div class="row">
+                        <a href="https://arvintavco.com" class="col text-decoration-none    ">
+                            <img src="~/Content/svg/Logo.svg" class=" text-center" width="128" height="128" />
+                            <p class="text-muted text-center text-decoration-none">طراحی و توسعه توسط آروین تاو</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 text-center">
+                    <ul class="footer-links">
+                        <li>
+                            <a href="tel: 04133371059">
+                                <ion-icon name="call-outline"></ion-icon>
+                                <label>04133371059</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel: 04133373556">
+                                <ion-icon name="call-outline"></ion-icon>
+                                <label>04133373556</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel: 09145016607">
+                                <ion-icon name="call-outline"></ion-icon>
+                                <label>09145016607</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="email: info@arvintavco.com">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <label>info@arvintavco.com</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/arvin.tav.co/?hl=en">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                                <label>Instagram</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/arvin-tav">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                                <label>LinkedIn</label>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </content>
+    </footer>
+
+
     <script src="~/Content/js/bootstrap.min.js"></script>
     @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>*@
     <script src="~/Content/js/masonry.js"></script>
-    <link href="~/Content/css/Global.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
     @RenderSection("Scripts", required: false)
 

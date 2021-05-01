@@ -1,0 +1,66 @@
+﻿/*Star*/
+/*#region Material  */
+/*#endregion */
+/*
+backdrop-filter: blur(2px);
+backdrop-filter: brightness(60%);
+backdrop-filter: contrast(40%);
+backdrop-filter: drop-shadow(4px 4px 10px blue);
+backdrop-filter: grayscale(30%);
+backdrop-filter: hue-rotate(120deg);
+backdrop-filter: invert(70%);
+backdrop-filter: opacity(20%);
+backdrop-filter: sepia(90%);
+backdrop-filter: saturate(80%);
+*/
+/*#endregion */
+/*#region Alignment */
+/*#endregion */
+.body {
+  display: flex;
+  flex-direction: column; }
+
+.grid a {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -moz-border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px; }
+  .grid a img {
+    width: 100%; }
+  .grid a .overlay {
+    opacity: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.72) 86.78%);
+    display: flex;
+    flex-direction: column;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    padding: 12px; }
+    .grid a .overlay label {
+      color: #fff;
+      font-size: 12px; }
+
+.grid a:hover {
+  -moz-box-shadow: rgba(0, 0, 0, 0.16) 0 8px 12px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0 8px 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 8px 12px; }
+  .grid a:hover .overlay {
+    opacity: 1; }

@@ -1766,20 +1766,26 @@
     <Content Include="Content\css\Global.min.css">
       <DependentUpon>Global.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\Index.css" />
+    <Content Include="Content\css\Index.min.css">
+      <DependentUpon>Index.css</DependentUpon>
+    </Content>
     <Content Include="Content\img\1.jpg" />
     <Content Include="Content\img\2.jpg" />
     <Content Include="Content\img\3.jpg" />
     <Content Include="Content\img\4.jpg" />
+    <Content Include="Content\img\Enamad.png" />
     <Content Include="Content\img\5.jpg" />
     <Content Include="Content\img\6.jpg" />
     <Content Include="Content\img\7.jpg" />
     <Content Include="Content\img\8.jpg" />
     <Content Include="Content\img\9.jpg" />
+    <Content Include="Content\img\Men.png" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\masonry.js" />
+    <Content Include="Content\svg\Logo.svg" />
     <Content Include="favicon.ico" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -1796,14 +1802,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Content\fonts\webfonts\" />
     <Folder Include="Models\" />
     <Folder Include="Resources\Images\Thumb\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\scss\Global.scss" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
@@ -1817,6 +1820,11 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="Content\scss\Index.scss" />
+    <Content Include="Content\scss\_colors.scss" />
+    <Content Include="Content\scss\_layout.scss" />
+    <Content Include="Content\fonts\IRANYekan.ttf" />
+    <Content Include="Content\manifest.json" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>

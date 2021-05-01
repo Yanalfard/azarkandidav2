@@ -1,0 +1,53 @@
+﻿@import '_colors.scss';
+@import '_layout.scss';
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    a {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        @include trans(.3s);
+        -moz-transition-property: box-shadow;
+        -o-transition-property: box-shadow;
+        -webkit-transition-property: box-shadow;
+        transition-property: box-shadow;
+        @include border-def-radius;
+
+        img {
+            width: 100%;
+        }
+
+        .overlay {
+            opacity: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            @include trans(.2s);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.72) 86.78%);
+            @include column;
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+            padding: 12px;
+
+            label {
+                color: #fff;
+                font-size: 12px;
+            }
+        }
+    }
+
+    a:hover {
+        @include shadow-medium;
+
+        .overlay {
+            opacity: 1;
+        }
+    }
+}

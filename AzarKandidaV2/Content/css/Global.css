@@ -1,2 +1,130 @@
-﻿.container-main {
-  margin-top: calc(56px + 20px); }
+﻿/*Star*/
+/*#region Material  */
+/*#endregion */
+/*
+backdrop-filter: blur(2px);
+backdrop-filter: brightness(60%);
+backdrop-filter: contrast(40%);
+backdrop-filter: drop-shadow(4px 4px 10px blue);
+backdrop-filter: grayscale(30%);
+backdrop-filter: hue-rotate(120deg);
+backdrop-filter: invert(70%);
+backdrop-filter: opacity(20%);
+backdrop-filter: sepia(90%);
+backdrop-filter: saturate(80%);
+*/
+/*#endregion */
+/*#region Alignment */
+/*#endregion */
+/*#region Layout */
+.frow {
+  display: flex;
+  flex-direction: row; }
+
+.frowr {
+  display: flex;
+  flex-direction: row-reverse; }
+
+.fcol {
+  display: flex;
+  flex-direction: column; }
+
+.fcolr {
+  display: flex;
+  flex-direction: column-reverse; }
+
+.flex-1 {
+  flex: 1; }
+
+.flex-2 {
+  flex: 2; }
+
+.flex-3 {
+  flex: 3; }
+
+.flex-4 {
+  flex: 4; }
+
+.flex-5 {
+  flex: 5; }
+
+.flex-6 {
+  flex: 6; }
+
+.flex-7 {
+  flex: 7; }
+
+.flex-8 {
+  flex: 8; }
+
+.flex-9 {
+  flex: 9; }
+
+.flex-10 {
+  flex: 10; }
+
+.flex-11 {
+  flex: 11; }
+
+.flex-auto {
+  flex: auto; }
+
+/*#endregion */
+* {
+  margin: 0;
+  padding: 0; }
+
+.navbar {
+  border-bottom: 1px solid #dadada;
+  background-color: #fff !important; }
+  .navbar .navbar-brand .title {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 0; }
+  .navbar .navbar-brand .subtitle {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: .6em;
+    color: #666; }
+  .navbar .men {
+    width: 64px;
+    height: 64px;
+    margin: -4px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+    border: 1px solid #eee; }
+  .navbar .logo img {
+    margin: -4px;
+    width: 66px;
+    height: 66px; }
+
+.container-main {
+  margin-top: calc(74px + 24px); }
+
+.footer .footer-links {
+  list-style: none; }
+  .footer .footer-links li {
+    cursor: pointer !important;
+    margin-bottom: 8px; }
+    .footer .footer-links li a {
+      font-size: 16px;
+      display: flex;
+      flex-direction: row;
+      color: #333;
+      -moz-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;
+      -webkit-transition: all ease 0.3s;
+      transition: all ease 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-align-items: center;
+      align-items: center; }
+      .footer .footer-links li a ion-icon {
+        font-size: 20px;
+        margin-left: 8px;
+        min-width: 20px; }
+      .footer .footer-links li a label {
+        font-size: 14px; }
+    .footer .footer-links li a:hover {
+      color: #999; }

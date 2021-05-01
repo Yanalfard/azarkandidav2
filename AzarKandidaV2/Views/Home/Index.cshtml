@@ -1,69 +1,47 @@
 ﻿@model IEnumerable<DataLayer.TblImage>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
 
-    .body {
-        display: flex;
-        flex-direction: column;
-    }
 
-    .grid a {
-        display: flex;
-        overflow: hidden;
-    }
+@section Styles{
 
-        .grid a img {
-            width: 100%;
-        }
-</style>
+    <link href="~/Content/css/Index.min.css" rel="stylesheet" />
+
+}
 
 <div class="grid">
 
     @foreach (var item in Model)
     {
-        <a href="@item.Link"><img src="~/Resources/Images/Thumb/@item.ImageUrl" alt=""></a>
-
+        <a href="@item.Link">
+            <img src="~/Resources/Images/Thumb/@item.ImageUrl" loading="lazy" alt="@item.Text">
+            <div class="overlay">
+                <label>
+                    این یک تست می باشد
+                </label>
+            </div>
+        </a>
     }
-    @*<a href=""><img src="~/Content/img/1.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/4.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/7.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/8.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/1.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/4.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/7.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/8.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/9.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/4.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/5.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/7.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/6.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/8.jpg" alt=""></a>
-        <a href=""><img src="~/Content/img/9.jpg" alt=""></a>*@
+
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+@section Scripts {
 
-<script>
-    var macy = Macy({
-        container: '.grid',
-        trueOrder: false,
-        waitForImages: false,
-        margin: 24,
-        columns: 3,
-        breakAt: {
-            1600: 4,
-            1200: 3,
-            900: 2,
-            450: 1,
-        }
-    });
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+
+    <script>
+        var macy = Macy({
+            container: '.grid',
+            trueOrder: false,
+            waitForImages: false,
+            margin: 24,
+            columns: 3,
+            breakAt: {
+                2400: 4,
+                1600: 4,
+                1200: 3,
+                900: 2,
+                450: 1,
+            }
+        });
+    </script>
+
+}
