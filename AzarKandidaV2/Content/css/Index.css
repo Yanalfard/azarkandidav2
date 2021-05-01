@@ -16,10 +16,6 @@ backdrop-filter: saturate(80%);
 /*#endregion */
 /*#region Alignment */
 /*#endregion */
-.body {
-  display: flex;
-  flex-direction: column; }
-
 .grid a {
   display: flex;
   overflow: hidden;

@@ -74,33 +74,66 @@ backdrop-filter: saturate(80%);
   margin: 0;
   padding: 0; }
 
-.navbar {
+.navigation {
+  height: 74px;
   border-bottom: 1px solid #dadada;
-  background-color: #fff !important; }
-  .navbar .navbar-brand .title {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 0; }
-  .navbar .navbar-brand .subtitle {
-    margin-top: 4px;
-    margin-bottom: 0;
-    font-size: .6em;
-    color: #666; }
-  .navbar .men {
-    width: 64px;
-    height: 64px;
-    margin: -4px;
+  background-color: #fff !important;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: stretch;
+  align-items: stretch; }
+  .navigation .navbar-brand {
+    display: block; }
+    .navigation .navbar-brand .title {
+      font-size: 1.1em;
+      color: #333;
+      margin-bottom: 0; }
+    .navigation .navbar-brand .subtitle {
+      margin-top: 4px;
+      margin-bottom: 0;
+      font-size: .6em;
+      color: #666; }
+  .navigation .men {
     -moz-border-radius: 6px 6px 6px 6px;
     -webkit-border-radius: 6px 6px 6px 6px;
     border-radius: 6px 6px 6px 6px;
     border: 1px solid #eee; }
-  .navbar .logo img {
-    margin: -4px;
-    width: 66px;
-    height: 66px; }
+  @media only screen and (max-width: 312px) {
+    .navigation .men {
+      display: none; } }
+  .navigation .logo {
+    display: block; }
+    .navigation .logo img {
+      margin: -4px;
+      width: 66px;
+      height: 66px; }
 
 .container-main {
   margin-top: calc(74px + 24px); }
+
+.footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr; }
+
+@media only screen and (min-width: 365px) and (max-width: 700px) {
+  .footer .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
+    .footer .footer-grid .fcol:last-child {
+      grid-column-start: span 2; } }
+
+@media only screen and (max-width: 365px) {
+  .footer .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
+    .footer .footer-grid .fcol:first-child {
+      margin: auto; } }
 
 .footer .footer-links {
   list-style: none; }

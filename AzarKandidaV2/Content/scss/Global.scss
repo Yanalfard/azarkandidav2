@@ -35,12 +35,19 @@
     padding: 0;
 }
 
-
-.navbar {
+.navigation {
+    height: $navbar-height;
     border-bottom: 1px solid #dadada;
     background-color: #fff !important;
+    padding: 12px;
+    @include row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: stretch;
+    align-items: stretch;
 
     .navbar-brand {
+        display: block;
 
         .title {
             font-size: 1.1em;
@@ -57,14 +64,19 @@
     }
 
     .men {
-        width: 64px;
-        height: 64px;
-        margin: -4px;
         @include border-def-radius;
         border: 1px solid $Text-5;
     }
 
+    @media only screen and (max-width: 312px) {
+        .men {
+            display: none;
+        }
+    }
+
     .logo {
+        display: block;
+
         img {
             margin: -4px;
             width: 66px;
@@ -78,6 +90,38 @@
 }
 
 .footer {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+
+
+    @media only screen and (min-width: 365px) and (max-width: 700px) {
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            .fcol:last-child {
+                grid-column-start: span 2;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 365px) {
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            .fcol:first-child {
+                margin: auto;
+            }
+        }
+    }
+
     .footer-links {
         list-style: none;
 
