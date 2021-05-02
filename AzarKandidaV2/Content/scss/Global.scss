@@ -48,24 +48,29 @@
 
     .navbar-brand {
         display: block;
+        @include column;
 
         .title {
-            font-size: 1.1em;
-            color: $Text;
             margin-bottom: 0;
+
+            img {
+                height: 42px;
+            }
         }
 
         .subtitle {
             margin-top: 4px;
             margin-bottom: 0;
-            font-size: .6em;
-            color: $Text-2;
+            font-size: .7em;
+            color: #2B2E83;
+            height: 12px;
         }
     }
 
     .men {
         @include border-def-radius;
         border: 1px solid $Text-5;
+        margin: -5px;
     }
 
     @media only screen and (max-width: 312px) {
@@ -75,12 +80,12 @@
     }
 
     .logo {
+        height: auto;
         display: block;
 
         img {
-            margin: -4px;
-            width: 66px;
-            height: 66px;
+            height: 100%;
+            width: auto;
         }
     }
 }
@@ -95,8 +100,6 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
     }
-
-
 
     @media only screen and (min-width: 365px) and (max-width: 700px) {
         .footer-grid {

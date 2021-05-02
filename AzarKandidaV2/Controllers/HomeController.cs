@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using DataLayer;
 using AzarKandidaV2.Utilities;
 using System.IO;
+using AzarKandidaV2.Utilities;
 
 namespace AzarKandidaV2.Controllers
 {
@@ -14,9 +15,12 @@ namespace AzarKandidaV2.Controllers
     {
         private Core _db = new Core();
 
+
         public ActionResult Index()
         {
-            return View(_db.Image.Get(orderBy: i => i.OrderByDescending(k => k.ImageId)));
+            var res = _db.Image.Get().ToList();
+            res.ShuffleList();
+            return View(res);
         }
     }
 }
