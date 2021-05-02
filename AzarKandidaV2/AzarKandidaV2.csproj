@@ -1795,7 +1795,6 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Content\fonts\webfonts\" />
     <Folder Include="Models\" />
-    <Folder Include="NewFolder1\" />
     <Folder Include="Resources\Images\Thumb\" />
   </ItemGroup>
   <ItemGroup>

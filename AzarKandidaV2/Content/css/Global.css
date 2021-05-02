@@ -88,7 +88,8 @@ backdrop-filter: saturate(80%);
   .navigation .navbar-brand {
     display: block;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 0; }
     .navigation .navbar-brand .title {
       margin-bottom: 0; }
       .navigation .navbar-brand .title img {
@@ -103,9 +104,8 @@ backdrop-filter: saturate(80%);
     -moz-border-radius: 6px 6px 6px 6px;
     -webkit-border-radius: 6px 6px 6px 6px;
     border-radius: 6px 6px 6px 6px;
-    border: 1px solid #eee;
-    margin: -5px; }
-  @media only screen and (max-width: 312px) {
+    border: 1px solid #eee; }
+  @media only screen and (max-width: 324px) {
     .navigation .men {
       display: none; } }
   .navigation .logo {
@@ -114,6 +114,45 @@ backdrop-filter: saturate(80%);
     .navigation .logo img {
       height: 100%;
       width: auto; }
+
+@media only screen and (max-width: 424px) {
+  .navigation {
+    height: 80px;
+    border-bottom: 1px solid #dadada;
+    background-color: #fff !important;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: stretch;
+    align-items: stretch; }
+    .navigation .navbar-brand {
+      display: block;
+      display: flex;
+      flex-direction: column; }
+      .navigation .navbar-brand .title {
+        margin-bottom: 0; }
+        .navigation .navbar-brand .title img {
+          height: 32px; }
+      .navigation .navbar-brand .subtitle {
+        margin-top: 4px;
+        margin-bottom: 0;
+        font-size: .5em;
+        color: #2B2E83;
+        height: 12px; }
+    .navigation .men {
+      -moz-border-radius: 6px 6px 6px 6px;
+      -webkit-border-radius: 6px 6px 6px 6px;
+      border-radius: 6px 6px 6px 6px;
+      border: 1px solid #eee;
+      max-width: 55px; }
+    .navigation .logo {
+      height: auto;
+      display: block; }
+      .navigation .logo img {
+        height: 100%;
+        width: auto; } }
 
 .container-main {
   margin-top: calc(100px + 24px); }

@@ -49,6 +49,7 @@
     .navbar-brand {
         display: block;
         @include column;
+        padding: 0;
 
         .title {
             margin-bottom: 0;
@@ -70,10 +71,9 @@
     .men {
         @include border-def-radius;
         border: 1px solid $Text-5;
-        margin: -5px;
     }
 
-    @media only screen and (max-width: 312px) {
+    @media only screen and (max-width: 324px) {
         .men {
             display: none;
         }
@@ -86,6 +86,57 @@
         img {
             height: 100%;
             width: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .navigation {
+        height: $navbar-height - 20px;
+        border-bottom: 1px solid #dadada;
+        background-color: #fff !important;
+        padding: 12px;
+        @include row;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-align-items: stretch;
+        align-items: stretch;
+
+        .navbar-brand {
+            display: block;
+            @include column;
+
+            .title {
+                margin-bottom: 0;
+
+                img {
+                    height: 32px;
+                }
+            }
+
+            .subtitle {
+                margin-top: 4px;
+                margin-bottom: 0;
+                font-size: .5em;
+                color: #2B2E83;
+                height: 12px;
+            }
+        }
+
+        .men {
+            @include border-def-radius;
+            border: 1px solid $Text-5;
+            max-width: 55px;
+        }
+
+        .logo {
+            height: auto;
+            display: block;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
         }
     }
 }
