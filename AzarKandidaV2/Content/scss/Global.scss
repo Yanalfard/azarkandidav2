@@ -35,111 +35,73 @@
     padding: 0;
 }
 
-.navigation {
+.navheader {
     height: $navbar-height;
-    border-bottom: 1px solid #dadada;
-    background-color: #fff !important;
-    padding: 12px;
-    @include row;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-align-items: stretch;
-    align-items: stretch;
+    padding-right: 8px;
+    /*border-bottom: $mat-border-color 1px solid;*/
+    grid-gap: 12px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include shadow-medium;
+    //-
+    background-color: white;
 
-    .navbar-brand {
-        display: block;
-        @include column;
-        padding: 0;
-
-        .title {
-            margin-bottom: 0;
-
-            img {
-                height: 42px;
-            }
-        }
-
-        .subtitle {
-            margin-top: 4px;
-            margin-bottom: 0;
-            font-size: .7em;
-            color: #2B2E83;
-            height: 12px;
-        }
-    }
-
-    .men {
-        @include border-def-radius;
-        border: 1px solid $Text-5;
-    }
-
-    @media only screen and (max-width: 324px) {
-        .men {
-            display: none;
-        }
-    }
-
-    .logo {
-        height: auto;
-        display: block;
-
-        img {
-            height: 100%;
-            width: auto;
-        }
-    }
-}
-
-@media only screen and (max-width: 424px) {
-    .navigation {
-        height: $navbar-height - 20px;
-        border-bottom: 1px solid #dadada;
-        background-color: #fff !important;
-        padding: 12px;
+    .navheader-content {
         @include row;
+        height: 100%;
+        grid-column-gap: 6px;
         -webkit-justify-content: space-between;
         justify-content: space-between;
-        -webkit-align-items: stretch;
-        align-items: stretch;
+        -webkit-align-items: center;
+        align-items: center;
 
-        .navbar-brand {
-            display: block;
-            @include column;
-
-            .title {
-                margin-bottom: 0;
-
-                img {
-                    height: 32px;
-                }
-            }
-
-            .subtitle {
-                margin-top: 4px;
-                margin-bottom: 0;
-                font-size: .5em;
-                color: #2B2E83;
-                height: 12px;
-            }
-        }
-
-        .men {
-            @include border-def-radius;
-            border: 1px solid $Text-5;
-            max-width: 55px;
-        }
-
-        .logo {
-            height: auto;
-            display: block;
+        .azarkandida, .arvintav, .men {
+            height: 100%;
+            padding: 8px 0;
 
             img {
                 height: 100%;
-                width: auto;
             }
+        }
+
+        .arvintav {
+            margin-right: 4px;
+        }
+
+        .men {
+            margin: -2px;
+            padding: 0;
+        }
+
+
+        .d-none {
+            grid-area: no;
         }
     }
 }
+
+@media only screen and (min-width: 540px) and (max-width: 670px) {
+    .navheader {
+        height: $navbar-height - 20px;
+    }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 540px) {
+    .navheader {
+        height: $navbar-height - 24px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .navheader {
+        height: $navbar-height - 40px;
+    }
+}
+
+
 
 .container-main {
     margin-top: calc(#{$navbar-height} + 24px);
@@ -201,6 +163,7 @@
 
                 label {
                     font-size: 14px;
+                    cursor: pointer;
                 }
             }
 

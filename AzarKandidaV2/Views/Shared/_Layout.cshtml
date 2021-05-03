@@ -16,18 +16,20 @@
 
 </head>
 <body>
-    <nav class="navigation fixed-top shadow bg-light">
-        <a class="navbar-brand" href="/">
-            <h1 class="title">
-                <img src="~/Content/img/Untitled-1.svg" />
-            </h1>
-            <p class="subtitle">تحولی نوین در انتخابات</p>
-        </a>
-        <img src="~/Content/img/Men.png" alt="" class="men" />
-        <a class="logo" href="https://arvintavco.com">
-            <img src="~/Content/svg/Logo.svg" alt="" />
-        </a>
-    </nav>
+
+    <header class="navheader">
+        <nav class="navheader-content">
+            <a href="/" class="azarkandida">
+                <img src="~/Content/svg/Azarkandida.svg" alt="" />
+            </a>
+            <a href="https://arvintavco.com" class="arvintav">
+                <img src="~/Content/svg/Arvintav.svg" alt="" />
+            </a>
+            <a href="/" class="men">
+                <img src="~/Content/img/Men2.png" alt="" />
+            </a>
+        </nav>
+    </header>
 
     <div class="container-main container">
         @RenderBody()
@@ -49,38 +51,46 @@
             <div class="footer-grid">
                 <div class="fcol">
                     <a href="" class="fcol text-decoration-none m-auto">
-                        <img src="~/Content/img/Untitled-1.svg" width="164" height="72" class="m-auto text-center" />
+                        <img src="~/Content/svg/Azarkandida.svg" width="164" height="72" class="m-auto text-center" />
                         <p class="subtitle text-decoration-none" style="color:#2B2E83">تحولی نوین در انتخابات</p>
                     </a>
                 </div>
                 <div class="fcol">
                     <a href="https://arvintavco.com" class="fcol text-decoration-none m-auto">
-                        <img src="~/Content/svg/Logo.svg" class="m-auto text-center" width="128" height="128" />
+                        <img src="~/Content/svg/Arvintav.svg" class="m-auto text-center" width="128" height="128" />
                         <p class="text-muted text-center text-decoration-none">طراحی و توسعه توسط آروین تاو</p>
                     </a>
                 </div>
                 <div class="fcol">
                     <ul class="footer-links">
-                        <li>
+                        <li class="frow">
                             <a href="tel: 04133371059">
                                 <ion-icon name="call-outline"></ion-icon>
-                                <label>04133371059</label>
+                                <label dir="ltr">04133371059</label>
                             </a>
-                        </li>
-                        <li>
+                            <b class="mx-2">-</b>
                             <a href="tel: 04133373556">
-                                <ion-icon name="call-outline"></ion-icon>
-                                <label>04133373556</label>
+                                <label dir="ltr">04133373556</label>
                             </a>
                         </li>
-                        <li>
+                        <li class="frow">
                             <a href="tel: 09145016607">
                                 <ion-icon name="call-outline"></ion-icon>
-                                <label>09145016607</label>
+                                <label dir="ltr">09145016607</label>
+                            </a>
+                            <b class="mx-2">-</b>
+                            <a href="tel: 09145761697">
+                                <label dir="ltr">09145761697</label>
                             </a>
                         </li>
                         <li>
-                            <a href="email: info@arvintavco.com">
+                            <a href="https://goo.gl/maps/34NKrkKjiHbv8fhy9">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <label>تبریز - چایکنار - بعد از پل منصور به سمت آبرسان - ساختمان عمارت صبا - طبقه همکف غربی</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@arvintavco.com">
                                 <ion-icon name="mail-outline"></ion-icon>
                                 <label>info@arvintavco.com</label>
                             </a>
@@ -97,7 +107,6 @@
                                 <label>LinkedIn</label>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </div>
