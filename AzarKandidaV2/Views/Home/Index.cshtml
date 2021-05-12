@@ -7,6 +7,27 @@
 
 }
 
+<div class="blog mb-4">
+    <h2 class="h5 mb-4">
+        - اخبار انتخابات شورای اسلامی شهر 1400
+    </h2>
+    <div class="single-item-rtl" dir="rtl">
+        @for (int i = 0; i < 10; i++)
+        {
+            <div class="card ml-3 mr-3">
+                <img src="~/Content/img/instagramPost.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">تیتر خبر</h5>
+                    <p class="card-text">
+                        این یک خبر می باشد، خبر برای خواندن، خبر را بخوانید
+                    </p>
+                    <a href="/Blog" class="link-primary text-decoration-none">بیشتر...</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
 <div class="grid">
 
     @foreach (var item in Model)
@@ -15,7 +36,7 @@
             <img src="~/Resources/Images/Thumb/@item.ImageUrl" loading="lazy" alt="@item.Text">
             <div class="overlay">
                 <label>
-                   @item.Text
+                    @item.Text
                 </label>
             </div>
         </a>
@@ -42,6 +63,43 @@
                 450: 1,
             }
         });
+    </script>
+
+
+
+
+    <script>
+        $('.single-item-rtl').slick({
+            rtl: true,
+            infinite: true,
+            autoplay: true,
+            arrows: true,
+            nextArrow: `<button class="slick-prev slick-arrow" type="button" style=""><ion-icon size="large" name="chevron-back-outline"></ion-icon></button>`,
+            prevArrow: `<button class="slick-next slick-arrow" type="button" style=""><ion-icon size="large" name="chevron-forward-outline"></ion-icon></button>`,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 780,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 512,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
     </script>
 
 }

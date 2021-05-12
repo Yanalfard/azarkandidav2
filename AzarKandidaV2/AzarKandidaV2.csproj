@@ -131,6 +131,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1768,14 +1769,19 @@
     <Content Include="Content\css\Index.min.css">
       <DependentUpon>Index.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\slick-theme.css" />
+    <Content Include="Content\css\slick.css" />
     <Content Include="Content\img\Enamad.png" />
     <Content Include="Content\img\home.png" />
+    <Content Include="Content\img\instagramPost.jpg" />
     <Content Include="Content\img\Men.png" />
     <Content Include="Content\img\Men2.png" />
     <Content Include="Content\img\Untitled-1.svg" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\masonry.js" />
+    <Content Include="Content\js\slick.min.js" />
     <Content Include="Content\svg\Arvintav.svg" />
     <Content Include="Content\svg\Azarkandida.svg" />
     <Content Include="Content\svg\Men.svg" />
@@ -1792,6 +1798,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
