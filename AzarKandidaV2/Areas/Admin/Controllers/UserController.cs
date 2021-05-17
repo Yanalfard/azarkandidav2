@@ -45,6 +45,8 @@ namespace AzarKandidaV2.Areas.Admin.Controllers
                     else
                     {
                         ModelState.AddModelError("ImageUrl", "عکس آپلود کنید");
+                        return View(user);
+
                     }
                     addUser.Text = user.Text;
                     addUser.Link = user.Link;

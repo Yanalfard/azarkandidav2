@@ -7,6 +7,7 @@
       <Diagram DiagramId="886b5e2be18d4be4bfa2c0261a845aeb" Name="Diagram1">
         <EntityTypeShape EntityType="AzarkandidaV2Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AzarkandidaV2Model.TblImage" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AzarkandidaV2Model.TblBlog" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

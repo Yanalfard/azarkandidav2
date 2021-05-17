@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,12 @@ namespace AzarKandidaV2.Controllers
 {
     public class BlogController : Controller
     {
+        private Core _db = new Core();
         // GET: Blog
-        public ActionResult Index(int? id)
+        [Route("Blog/{id?}/{name?}")]
+        public ActionResult Index(int? id, string name)
         {
-            return View();
+            return View(_db.Blog.GetById(id));
         }
     }
 }

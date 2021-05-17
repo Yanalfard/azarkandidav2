@@ -15,6 +15,17 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="TblBlog">
+          <Key>
+            <PropertyRef Name="BlogId" />
+          </Key>
+          <Property Name="BlogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="150" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Body" Type="nvarchar" MaxLength="1000" />
+          <Property Name="MainImage" Type="nvarchar" MaxLength="150" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+        </EntityType>
         <EntityType Name="TblImage">
           <Key>
             <PropertyRef Name="ImageId" />
@@ -58,6 +69,7 @@
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="AzarkandidaV2ModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblBlog" EntityType="Self.TblBlog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblImage" EntityType="Self.TblImage" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -117,7 +129,19 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="TblBlog" EntityType="AzarkandidaV2Model.TblBlog" />
         </EntityContainer>
+        <EntityType Name="TblBlog">
+          <Key>
+            <PropertyRef Name="BlogId" />
+          </Key>
+          <Property Name="BlogId" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Body" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="MainImage" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -153,6 +177,18 @@
           <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="AzarkandidaV2Model.Store.sp_helpdiagrams" />
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="AzarkandidaV2Model.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="AzarkandidaV2Model.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="TblBlog">
+            <EntityTypeMapping TypeName="AzarkandidaV2Model.TblBlog">
+              <MappingFragment StoreEntitySet="TblBlog">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="MainImage" ColumnName="MainImage" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

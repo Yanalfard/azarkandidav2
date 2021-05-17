@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DataLayer.TblImage>
+﻿@model  AzarKandidaV2.ViewModels.ImageAndNewsVm
 
 
 @section Styles{
@@ -12,16 +12,17 @@
         - اخبار انتخابات شورای اسلامی شهر 1400
     </h2>
     <div class="single-item-rtl" dir="rtl">
-        @for (int i = 0; i < 10; i++)
+        @foreach (var item in Model.Blogs)
         {
             <div class="card ml-3 mr-3">
-                <img src="~/Content/img/instagramPost.jpg" class="card-img-top" alt="...">
+                @*<img src="~/Content/img/instagramPost.jpg" class="card-img-top" alt="...">*@
+                <img src="~/Resources/Blogs/Thumb/@item.MainImage" class="card-img-top" alt="@item.Name">
                 <div class="card-body">
-                    <h5 class="card-title">تیتر خبر</h5>
+                    <h5 class="card-title">@item.Name</h5>
                     <p class="card-text">
-                        این یک خبر می باشد، خبر برای خواندن، خبر را بخوانید
+                        @item.Title
                     </p>
-                    <a href="/Blog" class="link-primary text-decoration-none">بیشتر...</a>
+                    <a href="/Blog/@item.BlogId/@item.Name.Replace(" ","-")" class="link-primary text-decoration-none">بیشتر...</a>
                 </div>
             </div>
         }
@@ -30,7 +31,7 @@
 
 <div class="grid">
 
-    @foreach (var item in Model)
+    @foreach (var item in Model.Images)
     {
         <a href="@item.Link">
             <img src="~/Resources/Images/Thumb/@item.ImageUrl" loading="lazy" alt="@item.Text">

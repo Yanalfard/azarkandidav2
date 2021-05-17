@@ -1,0 +1,73 @@
+﻿@model DataLayer.TblBlog
+@{
+    ViewBag.Title = "ویرایش خبر";
+}
+
+<div class="flex-column card flex-div border-0 shadow">
+    <div class="card-header bg-white">
+        <h4>ویرایش خبر  </h4>
+    </div>
+    @using (Html.BeginForm("Edit", "Blog", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.BlogId)
+        @Html.HiddenFor(m => m.MainImage)
+
+        <div class="card-body">
+            <div class="form-group mx-sm-1 mb-2">
+                <span>نام</span>
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control form-control-sm", placeholder = "نام ", required = "required" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group mx-sm-1 mb-2">
+                <span>موضوع</span>
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control form-control-sm", placeholder = "موضوع", required = "required" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group mx-sm-1 mb-2">
+                <span>توضیح مختصر</span>
+
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control form-control-sm", placeholder = "توضیح مختصر", required = "required" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group mx-sm-1 mb-2">
+                <span>متن</span>
+
+                @Html.TextAreaFor(model => model.Body, new { htmlAttributes = new { @class = "form-control form-control-sm", placeholder = "متن", required = "required" } })
+                @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group mx-sm-1 mb-2">
+                <div>
+                    @if (Model.MainImage != null)
+                    {
+                        <img src="~/Resources/Blogs/Thumb/@Model.MainImage" alt="Alternate Text" />
+                    }
+                </div>
+                <span>
+                    عکس خبر
+                </span>
+                <input type="file" name="MainImage" id="MainImage" />
+                @Html.ValidationMessageFor(model => model.MainImage, "", new { @class = "text-danger" })
+
+            </div>
+
+        </div>
+        <div class="card-footer bg-white">
+            <div class="flex-row">
+                <button class="btn btn-primary">تایید</button>
+                <a href="@Url.Action("Index")" class="btn btn-secondary mr-2">بازگشت</a>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+<!-- #endregion -->
+@section Scripts{
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <script src="~/Scripts/ckeditor/adapters/jquery.js"></script>
+    <script>
+        $('#Body').ckeditor();
+    </script>
+}

@@ -8,6 +8,7 @@ using DataLayer;
 using AzarKandidaV2.Utilities;
 using System.IO;
 using AzarKandidaV2.Utilities;
+using AzarKandidaV2.ViewModels;
 
 namespace AzarKandidaV2.Controllers
 {
@@ -20,7 +21,14 @@ namespace AzarKandidaV2.Controllers
         {
             var res = _db.Image.Get().ToList();
             res.ShuffleList();
-            return View(res);
+            var blog = _db.Blog.Get().ToList();
+            res.ShuffleList();
+            ImageAndNewsVm list = new ImageAndNewsVm()
+            {
+                Images = res,
+                Blogs= blog
+            };
+            return View(list);
         }
     }
 }

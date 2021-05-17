@@ -1,16 +1,22 @@
-﻿
+﻿@model DataLayer.TblBlog
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = Model.Name;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container mb-3 fcol">
-    <img src="~/Content/img/instagramPost.jpg" width="300" height="300" class="shadow mx-auto img-fluid" alt="" />
+    <img src="~/Resources/Blogs/Thumb/@Model.MainImage" width="300" height="300" class="shadow mx-auto img-fluid" alt="" />
     <h1 class="h3 mt-3">
-        تیتر
+        @Model.Name
     </h1>
+    <h3 class="h3 mt-3">
+        @Model.Title
+    </h3>
+    <h4 class="h3 mt-3">
+        @Model.Description
+    </h4>
     <p>
-        طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
+        @Html.Raw(Model.Body)
     </p>
 </div>
 
