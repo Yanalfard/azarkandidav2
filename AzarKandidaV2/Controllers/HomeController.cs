@@ -30,5 +30,12 @@ namespace AzarKandidaV2.Controllers
             };
             return View(list);
         }
+
+
+        [Route("Blogs/{id}")]
+        public ActionResult Blogs(int id)
+        {
+            return View(_db.Blog.GetById(id));
+        }
     }
 }

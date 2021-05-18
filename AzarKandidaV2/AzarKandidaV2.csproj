@@ -133,7 +133,6 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
-    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2920,7 +2919,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Scripts\ckeditor\.htaccess" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Scripts\ckeditor\ckeditor.pack" />
@@ -2937,6 +2935,7 @@
     <Content Include="Scripts\ckeditor\_samples\adobeair\run.bat" />
     <Content Include="Scripts\ckeditor\_samples\adobeair\run.sh" />
     <Content Include="Scripts\ckeditor\_samples\assets\output_for_flash.fla" />
+    <Content Include="Views\Home\Blogs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
